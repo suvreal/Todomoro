@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Foundation\Inspiring;
+use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote');
+Artisan::command('your:command', function (Command $command) {
+    $command->info('Message');
+})->describe('Description');
