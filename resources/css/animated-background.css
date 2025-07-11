@@ -1,0 +1,23 @@
+.animated-bg-base {
+    background: linear-gradient(270deg, rgba(6, 221, 123, 0.24), rgba(216, 167, 15, 0.15), rgba(246, 0, 0, 0.17), rgba(15, 52, 213, 0.18), #6ee7b7);
+    background-size: 400% 400%;
+    animation: gradientMove 50s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0 50%;
+    }
+    25% {
+        background-position: 0 25%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 100% 75%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}

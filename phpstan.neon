@@ -1,0 +1,12 @@
+includes:
+    - ./vendor/phpstan/phpstan/conf/bleedingEdge.neon
+    - ./vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: max
+    paths:
+        - app
+        - routes
+
+    ignoreErrors:
+        - '#Method App\\Http\\Middleware\\HandleInertiaRequests::share\(\) should return array.*#'

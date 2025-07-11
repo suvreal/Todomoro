@@ -1,4 +1,5 @@
 import '../css/app.css';
+import '../css/animated-background.css';
 
 import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
@@ -7,6 +8,7 @@ import { createApp, h } from 'vue';
 import { ZiggyVue } from 'ziggy-js';
 import { initializeTheme } from './composables/useAppearance';
 import Index from './pages/tasks/Index.vue';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
@@ -20,14 +22,11 @@ createInertiaApp({
     setup({ el, App, props, plugin }) {
         const vueApp = createApp({ render: () => h(App, props) });
 
-        // 👇 Register your global component
         vueApp.component('Index', Index);
 
-        // 👇 Attach plugins
         vueApp.use(plugin);
         vueApp.use(ZiggyVue);
 
-        // 👇 Mount the app
         vueApp.mount(el);
     },
     progress: {
@@ -35,5 +34,4 @@ createInertiaApp({
     }
 });
 
-// This will set light / dark mode on page load...
 initializeTheme();

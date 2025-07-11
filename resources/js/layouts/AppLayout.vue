@@ -24,14 +24,3 @@ export default {
         <slot />
     </AppLayout>
 </template>
-
-<!--<script>-->
-<!--import AppLayout from '@/Layouts/AppLayout.vue';-->
-
-<!--export default {-->
-<!--    layout: AppLayout,-->
-<!--    props: {-->
-<!--        tasks: Array-->
-<!--    }-->
-<!--}-->
-<!--</script>-->
