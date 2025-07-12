@@ -23,7 +23,7 @@
                 </button>
             </div>
 
-            <div v-if="showFilters" class="mb-6 p-4 bg-white rounded-lg shadow transition-all duration-300">
+            <div v-if="showFilters" class="mb-6 p-4 bg-white rounded-lg shadow-md transition-all duration-300  light-animated-bg" id="filters">
                 <input
                     v-model="search"
                     @input="searchTasks"
@@ -133,6 +133,16 @@
 .task-item:hover .animated-bg {
     opacity: 0.15;
     animation: gradientMove 8s ease infinite;
+}
+
+.light-animated-bg {
+    background: linear-gradient(270deg, rgba(167, 243, 208, 0.31), rgba(252, 211, 77, 0.27), rgba(252, 165, 165, 0.32), rgba(165, 180, 252, 0.29), #6ee7b7);
+    background-size: 400% 400%;
+    transition: opacity 0.8s ease;
+}
+
+#filters {
+    animation: gradientMove 15s ease-in-out infinite;
 }
 
 @keyframes gradientMove {
